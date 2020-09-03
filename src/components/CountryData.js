@@ -34,8 +34,7 @@ export default function CountryData({country}) {
     if (country !== countryName) {
       setCountryName(country);
     }
-  }, [country]);
-
+  }, [country,countryName]);
 
   useEffect(() => {
       async function fetchCountryData(){
@@ -46,7 +45,7 @@ export default function CountryData({country}) {
           setdataLoading(false);
       }
       fetchCountryData();
-  }, [])
+  }, [countryName])
 
   const loading = 'Loading...';
   if(dataLoading)

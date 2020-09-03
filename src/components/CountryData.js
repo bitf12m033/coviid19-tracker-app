@@ -46,7 +46,7 @@ export default function CountryData({country}) {
           setdataLoading(false);
       }
       fetchCountryData();
-  }, [countryName])
+  }, [])
 
   const loading = 'Loading...';
   if(dataLoading)
